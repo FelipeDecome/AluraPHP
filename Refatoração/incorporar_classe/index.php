@@ -15,8 +15,8 @@ $contato = new Contato(
     'comercial'
 );
 
-$usuario = new Usuario('Giovanni', 'Tempobono', $contato, $cep, $telefone);
+$usuario = new Usuario('Giovanni', 'Tempobono', $contato);
 
-echo $usuario->getNome();
-
-echo $usuario->getTelefoneDdd();
+echo "<p>{$usuario->getNome()}</p>";
+echo "<p>{$usuario->getTelefoneDdd()}</p>";
+echo "<p>{$usuario->getNome()}</p>";

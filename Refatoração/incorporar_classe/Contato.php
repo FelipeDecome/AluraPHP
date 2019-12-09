@@ -8,22 +8,11 @@ class Contato
 {
     private $endereco;
     private $cep;
-    private $ddd;
-    private $telefone;
-    private $tipoTelefone;
 
-    public function __construct(
-        string $endereco,
-        string $cep,
-        string $ddd,
-        string $telefone,
-        string $tipoTelefone
-    ) {
+    public function __construct(string $endereco, string $cep)
+    {
         $this->endereco = $endereco;
         $this->cep = $cep;
-        $this->ddd = $ddd;
-        $this->telefone = $telefone;
-        $this->tipoTelefone = $tipoTelefone;
     }
 
     public function getCep(): string

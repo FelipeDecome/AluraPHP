@@ -34,7 +34,7 @@ class Usuario
 
     public function getEnderecoECep(): string
     {
-        return "$this->endereco $this->cep";
+        return "{$this->contato->getEndereco()} {$this->contato->getCep()}";
     }
 
     public function getTelefoneDdd(): string
