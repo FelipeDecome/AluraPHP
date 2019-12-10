@@ -6,12 +6,27 @@ namespace Alura\EncapsularCampo;
 
 class Funcionario
 {
-    public $nome;
-    public $salario;
+    private $nome;
+    private $salario;
 
     public function __construct(string $nome, int $salario)
     {
         $this->nome = $nome;
         $this->salario = $salario;
+    }
+    
+    public function getNome(): string
+    {
+        return $this->nome;
+    }
+
+    public function getSalario(): float
+    {
+        return $this->salario;
+    }
+
+    public function salarioAumento(float $aumento): float
+    {
+        return $this->salario += $aumento;
     }
 }
