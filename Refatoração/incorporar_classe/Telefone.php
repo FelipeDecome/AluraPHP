@@ -17,4 +17,9 @@ class Telefone
         $this->tipoTelefone = $tipoTelefone;
     }
 
+    public function getTelefoneDdd(): string
+    {
+        return "{$this->tipoTelefone}: ({$this->ddd}) {$this->telefone}";
+    }
+
 }

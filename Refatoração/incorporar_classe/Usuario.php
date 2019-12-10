@@ -9,17 +9,18 @@ class Usuario
     private $nome;
     private $sobrenome;
     private $contato;
-    private $cep;
     private $telefone;
 
     public function __construct(
         string $nome,
         string $sobrenome,
-        Contato $contato
+        Contato $contato, 
+        Telefone $telefone
     ) {
         $this->nome = $nome;
         $this->sobrenome = $sobrenome;
         $this->contato = $contato;
+        $this->telefone = $telefone;
     }
 
     public function getNome(): string
@@ -34,11 +35,11 @@ class Usuario
 
     public function getEnderecoECep(): string
     {
-        return "{$this->contato->getEndereco()} {$this->contato->getCep()}";
+        return $this->contato->getEnderecoECep();
     }
 
     public function getTelefoneDdd(): string
     {
-        return "({$this->contato->getDdd()}) {$this->contato->getTelefone()}";
+        return $this->telefone->getTelefoneDdd();
     }
 }

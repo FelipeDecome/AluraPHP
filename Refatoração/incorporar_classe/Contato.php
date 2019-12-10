@@ -20,23 +20,13 @@ class Contato
         return $this->cep;
     }
 
-    public function getDdd(): string
-    {
-        return $this->ddd;
-    }
-
-    public function getTelefone(): string
-    {
-        return $this->telefone;
-    }
-
-    public function getTipoTelefone(): string
-    {
-        return $this->tipoTelefone;
-    }
-
     public function getEndereco(): string
     {
         return $this->endereco;
+    }
+
+    public function getEnderecoECep(): string
+    {
+        return "{$this->endereco} - {$this->cep}";
     }
 }
